@@ -34,12 +34,14 @@
 // */
 
 const fs = require('fs');
+const { SUDO } = require('./src/settings/config.cjs');
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 
 function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "Your session id here",
+SESSION_ID: process.env.SESSION_ID || "ANJU-XPRO~OEVSBTiY#fPLIsHllcF6ctfHCLrca3AM52e7jbpdtXfP_IslPUCM",
+SUDO: process.env.SUDO || ["94717775628","94758775628"],
 PORT: process.env.PORT || "8000"
 };
